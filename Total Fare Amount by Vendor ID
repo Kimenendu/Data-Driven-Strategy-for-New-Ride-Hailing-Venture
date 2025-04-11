@@ -1,0 +1,5 @@
+SELECT 
+    VendorID, 
+    SUM(fare_amount) AS total_fare_amount
+FROM `my-test-project-kimenendu.uber_data_engineering_kimenendu.fact_table` 
+GROUP BY VendorID;
