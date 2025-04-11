@@ -1,0 +1,7 @@
+SELECT 
+    b.payment_type_name, 
+    SUM(a.tip_amount) AS total_tip_amount 
+FROM `my-test-project-kimenendu.uber_data_engineering_kimenendu.fact_table` a
+JOIN `my-test-project-kimenendu.uber_data_engineering_kimenendu.payment_type_dim` b
+    ON a.payment_type_id = b.payment_type_id
+GROUP BY b.payment_type_name;
