@@ -1,0 +1,8 @@
+SELECT 
+    pc.passenger_count,
+    COUNT(*) AS trip_count
+FROM `my-test-project-kimenendu.uber_data_engineering_kimenendu.fact_table` f
+JOIN `my-test-project-kimenendu.uber_data_engineering_kimenendu.passenger_count_dim` pc
+    ON f.passenger_count_id = pc.passenger_count_id
+GROUP BY pc.passenger_count
+ORDER BY pc.passenger_count;
