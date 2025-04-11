@@ -1,10 +1,5 @@
 # Data-Driven-Strategy-for-New-Ride-Hailing-Venture
 
-[Uber_Dashboard.pdf](https://github.com/user-attachments/files/19701612/Uber_Dashboard.pdf)
-
-
-
-
 ### Problem Statement
 A new ride-hailing company needed actionable insights from Uber’s TLC trip data to:
 
