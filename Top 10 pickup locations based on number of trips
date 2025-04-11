@@ -1,0 +1,10 @@
+SELECT 
+    pl.pickup_latitude,
+    pl.pickup_longitude,
+    COUNT(*) AS trip_count
+FROM `my-test-project-kimenendu.uber_data_engineering_kimenendu.fact_table` f
+JOIN `my-test-project-kimenendu.uber_data_engineering_kimenendu.pickup_location_dim` pl
+    ON f.pickup_location_id = pl.pickup_location_id
+GROUP BY pl.pickup_latitude, pl.pickup_longitude
+ORDER BY trip_count DESC
+LIMIT 10;
